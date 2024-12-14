@@ -35,9 +35,6 @@
     </main>
 
 
-
-
-
     <!--Destination Booking-->
     <div id="bookingModal" class="modal">
         <div class="modal-content">
@@ -487,5 +484,44 @@
 
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <script src="finalyear.js"></script>
+<!--
+    <script>
+      function openHotelBookingModal(hotelName, price) {
+          $('#hotelName').text(hotelName);
+          $('#hotelPrice').text('₹' + price);
+          $('#hotelNameHidden').val(hotelName);
+          $('#priceHidden').val(price);
+          $('#hotelBookingModal').show();
+      }
+
+      $(document).ready(function() {
+          $('#hotelBookingForm').on('submit', function(e) {
+              e.preventDefault();
+              $.ajax({
+                  url: 'process_booking.php',
+                  type: 'POST',
+                  data: $(this).serialize(),
+                  dataType: 'json',
+                  success: function(response) {
+                      if (response.success) {
+                          alert(response.message);
+                          $('#hotelBookingModal').hide();
+                          $('#hotelBookingForm')[0].reset();
+                      } else {
+                          alert('Error: ' + response.message);
+                      }
+                  },
+                  error: function() {
+                      alert('An error occurred. Please try again.');
+                  }
+              });
+          });
+
+          $('.close').click(function() {
+              $('#hotelBookingModal').hide();
+          });
+      });
+  </script>
+-->
 </body>
 </html>
