@@ -488,7 +488,6 @@ function createGalleryItem(imageSrc, index) {
 
 
 
-
 // Display destinations
 function displayDestinations() {
     destinationsContainer.innerHTML = '';
